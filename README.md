@@ -7,16 +7,45 @@ etcetera...
 
 ### Requirements
 
-* Linux
+* Ubuntu (for now)
 * Python 3 and up
 
 ## Usage
 
-TO-DO
+Create a file named `your_program_name.yaml`, and fill it out following this
+template:
+
+```yaml
+---
+
+# the name of your program. used for logging.
+name: your_program_name
+
+# required interpreters/compilers your program needs
+requires:
+    # the currently supported requirements are:
+    - python2
+    - python3
+
+# where to find your porgram
+location:
+    # the type of location to find your program.
+    # currently only local is supported
+    type: local
+    directory: directory_of_your_program
+
+# any shell commands that need to be run prior to running your program.
+setup:
+    - "echo foobar"
+
+# what shell command to run to start your program. make sure that this blocks
+# until your program is finished running.
+start: "interpreter foo.bar"
+```
 
 ## Development
 
-TO-DO
+Clone the project and hack away!
 
 ## Contributing
 
