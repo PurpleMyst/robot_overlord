@@ -24,7 +24,11 @@ class Program:
     def install_requirements(self):
         for item in self.requires:
             if item == "python3":
-                pass
+                self._run_command("sudo apt-get install -y -q "
+                                  "python3 python3-pip")
+            elif item == "python2":
+                self._run_command("sudo apt-get install -y -q "
+                                  "python2")
             else:
                 raise ValueError("Unsupported requirement %r" % item)
 
