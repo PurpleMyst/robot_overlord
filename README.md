@@ -43,6 +43,14 @@ setup:
 start: "interpreter foo.bar"
 ```
 
+After that, run at your shell the command:
+
+```shell
+$ python3 -m robot_overlord your_program_name.yaml
+```
+
+And your program will start being controlled by robot_overlord.
+
 ## Development
 
 Clone the project and hack away!
